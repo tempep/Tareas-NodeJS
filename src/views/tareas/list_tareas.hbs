@@ -1,0 +1,33 @@
+<div class="container p-5">
+    <div class="row">
+        {{#each tareas}}
+        <div class="col-md-4 mx-auto">
+             <div class="card text-center">
+                <div class="card-header">
+                    <p class="fs-3 text-uppercase text-center text-dark bg-info w-100 p-3">Tarea</p>
+                </div>
+                <div class="card-body">
+                <h3 class="card-title text-uppercase">
+                    {{titulo}}
+                </h3>
+                <hr>
+                <p class="m-2">
+                    {{descripcion}}
+                </p>
+                <p>{{timeago created_at}}</p>
+                <a href="/tareas/delete/{{id}}" class="btn btn-danger">Borrar tarea</a>
+                <a href="/tareas/editar/{{id}}" class="btn btn-secondary">Editar tarea</a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>No tiene tareas creadas</p>
+                    <a href="/tareas/add">Crea algunas tareas!</a>
+                </div>
+            </div>
+        {{/each}}
+        
+    </div>
+</div>

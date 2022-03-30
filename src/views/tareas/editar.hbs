@@ -1,0 +1,24 @@
+<div class="container p-5">
+    <div class="row">
+        <div class="col-md-3 mx-auto">
+             <div class="card text-center">
+            <div class="card-header">
+                <p class="fs-3 text-uppercase text-center text-dark bg-info w-100 p-3">Tareas</p>
+            </div>
+            <div class="card-body">
+                <form action="/tareas/editar/{{tareas_edit.id}}" method="post">
+                    <div class="form-group mb-2">
+                        <input type="text" class="form-control" value="{{tareas_edit.titulo}}" name="titulo" placeholder="Ingrese el titulo de la tarea">
+                    </div>
+                    
+                        <textarea name="descripcion" cols="25" rows="3" placeholder="Escriba aqui la descripción de la tarea">{{tareas_edit.descripcion}}</textarea>
+                        
+                    
+                        <button class="btn btn-success btn-block mt-2 mx-2">Guardar tarea</button>
+                              
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
